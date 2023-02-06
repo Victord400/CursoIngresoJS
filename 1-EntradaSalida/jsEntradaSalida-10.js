@@ -6,43 +6,25 @@ en el cuadro de texto "RESULTADO"*/
 function mostrarAumento()
 {
 
-//declado la variable  (las variables no se separan con espacio)
-//en todo caso se escribe todo junto pero con la regla de empezar cada palabra con mayuscula
-//lowercamelcase
+//declaro las variables
 
-var importeIngresado;
-var porcentajeImporteIngresado;
-var importeDescuento;
-var importeTotal;
+var importe;
+var descuento;//resultado//
+var importeFinal;
 
+//asigno las variables y la transformo en y resuelvo operatorias
 
-importeIngresado = document.getElementById("txtIdimporte").value;
-porcentajeDescuentoIngresado = prompt("Ingrese el porcentaje");
-iporteIngresado = parsefloat(importeIngresado);
-importeDescuentoIngresado = parseFloat(porcentajeDescuentoIngresado);
+importe = parseInt(document.getElementById("txtIdImporte").value);
 
-importeDescuento = importeIngresado *0.2;
-importeTotal = importeIngresado - importeDescuento;
+descuento = importe * 25 / 100;   
+importeFinal = importe - descuento;
 
-document.getElementById("tctIdImporte").value = "el total a pagar es: $" + importeDescuento;
+//asigno y muestro el nuevo importeFinal en el Id resultado
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+document.getElementById("txtIdResultado").value = importeFinal;
 
 }
 //txtIdImporte	
 //txtIdResultado
+//lowercame es el termino a escribir las variables con una mayuscula intermedia quedando como efecto de onda|
 
